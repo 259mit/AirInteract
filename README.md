@@ -20,9 +20,9 @@ https://user-images.githubusercontent.com/64850155/141962733-33931c61-f1c2-42e8-
 
 ___________________
 
-The Home screen
+The Home tab
 ---
-<img width="600" alt="Screenshot 2021-10-11 at 4 31 43 PM" src="https://user-images.githubusercontent.com/64850155/141954421-435b796a-49f9-4a60-931c-a2b43e9ae8bf.png">
+<img width="1400" alt="Screenshot 2021-10-11 at 4 31 43 PM" src="https://user-images.githubusercontent.com/64850155/141954421-435b796a-49f9-4a60-931c-a2b43e9ae8bf.png">
 
 ```
 The home screen of Airinteract has the navigation section, 
@@ -30,16 +30,41 @@ where users can navigate to the page of their choice.
 ```
 ___________________
 
-The Recording screen
+The Recording tab
 ---
-<img width="600" alt="Screenshot 2021-10-13 at 3 55 24 PM" src="https://user-images.githubusercontent.com/64850155/141966266-77dddd59-85ba-4a5e-82fc-6c89e7959077.png">
+<img width="1400" alt="Screenshot 2021-10-13 at 3 55 24 PM" src="https://user-images.githubusercontent.com/64850155/141966266-77dddd59-85ba-4a5e-82fc-6c89e7959077.png">
 
 ```
-The Recording screen of Airinteract has the navigation section, 
+The Recording screen of Airinteract, 
 where users can record their gestures.
 ```
 
+<img width="1400" alt="Screenshot 2021-11-16 at 2 34 30 PM" src="https://user-images.githubusercontent.com/64850155/141987912-4a0ceacf-1f13-4b08-9056-cd3316f86196.png">
+
 ```
-The Recording screen of Airinteract has the navigation section, 
-where users can record their gestures.
+The Recording screen of Airinteract, 
+where users can select the type of the gestures they want.
 ```
+
+<img width="1400" alt="Screenshot 2021-11-16 at 2 35 48 PM" src="https://user-images.githubusercontent.com/64850155/141988047-d24e6bf6-7ef9-4453-a192-6bf6389c1981.png">
+
+```
+The Recording screen of Airinteract, 
+where users can annotate and add custom annotation labels
+and save checkpoints as csv files.
+```
+
+___________________
+
+The Data Processing and Visualization tab
+---
+
+https://user-images.githubusercontent.com/64850155/141989149-cf16a5fc-3bd4-4855-ac9d-18b09b0e4a02.mov
+
+```
+The Data Processing and Visualization screen of Airinteract, 
+where users can merge gesture csv checkpoint files and pre-process them.
+They can also scroll through samples and visualize them.
+They can also save the merged file.
+```
+
