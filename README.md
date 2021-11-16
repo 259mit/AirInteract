@@ -14,6 +14,14 @@ To record, pre-process, train and test the dynamic gestures, introducing a no-co
 -	The data processing tool can merge the collected datasets into one and process it, such as removing the null values, redundant columns and normalizing it. Users can also visualize the recorded gestures. Users can then download the processed data.
 - The model training tool takes input of the processed dataframe, from the data processing tool. Users can split into train and test datasets by simply entering percentage of test dataset split. Users can then choose whether to use PCA. On selecting PCA, users can choose the number of components and percentage variability is then displayed. Then users can choose the type of model they wish to build. The application uses TensorFlow as the backend to build the network. First step would be to specify nodes in the input layer and entering total number of layers. Post that the user will have to just enter the number of neurons followed by the activation function. The application then displays the model summary. Users then must select the loss function and optimizer from dropdown menus and choose the number of epochs to train. Upon selecting the train checkbox, the model is trained. The training graph and the final test accuracy is displayed.
 
+## The App in action
+
+https://user-images.githubusercontent.com/64850155/141962733-33931c61-f1c2-42e8-902d-82b4ffa3ec77.mov
+
+
+
+
+
 ___________________
 
 The Home screen
