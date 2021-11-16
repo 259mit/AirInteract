@@ -8,7 +8,7 @@
 ### By Mithesh Ramachandran
 
 
-To record, pre-process, train and test the dynamic gestures, AirInteract: a no-code platform was used. AirInteract is based on Streamlit, a python-based web application deployment service. AirInteract is written completely in python. It has 3 main sections: Data Recording, Processing and Model Building.
+To record, pre-process, train and test the dynamic gestures, we introduce a no-code platform: AirInteract. AirInteract is based on Streamlit, a python-based web application deployment service. AirInteract is written completely in python. It has 3 main sections: Data Recording, Processing and Model Building.
 
 -	The data recording tool can save recorded gesture key points, where users can pause and resume recording. Users can also annotate their data simultaneously. Users have the flexibility to change the recording duration by changing the number of datapoints.
 -	The data processing tool can merge the collected datasets into one and process it, such as removing the null values, redundant columns and normalizing it. Users can also visualize the recorded gestures. Users can then download the processed data.
