@@ -68,3 +68,19 @@ They can also scroll through samples and visualize them.
 They can also save the merged file.
 ```
 
+___________________
+
+The Model Training tab
+---
+
+https://user-images.githubusercontent.com/64850155/142181711-60986399-7635-4358-8bd3-de324fdc4f67.mov
+
+
+```
+The model building and training screen of Airinteract, 
+where users can view the training predictor files.
+They can also use techniques to reduce dimensionality.
+They can select the type of network they wish to train.
+They can set and tune hyperparameters
+And also evaluate the model
+```
