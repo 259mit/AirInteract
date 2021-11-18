@@ -84,3 +84,35 @@ They can select the type of network they wish to train.
 They can set and tune hyperparameters
 And also evaluate the model
 ```
+
+___________________
+
+Installation
+---
+
+1. Clone the repo
+
+```
+git clone https://github.com/259mit/AirInteract
+```
+
+
+2. Install requirements
+
+```
+pip install -r requirements.txt
+```
+
+
+3. Run app.
+
+```
+python3 -m streamlit run main.py
+```
+
+___________________
+
+License
+---
+
+MIT License, 2021
