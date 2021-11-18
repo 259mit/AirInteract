@@ -112,6 +112,17 @@ python3 -m streamlit run main.py
 
 ___________________
 
+Dependencies
+---
+
+Python 3.7
+
+Streamlit
+
+MediaPipe HandPose Engine, Google.
+
+___________________
+
 License
 ---
 
