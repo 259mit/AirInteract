@@ -3,6 +3,9 @@
 A No-code one stop platform to record, annotate, visualize, merge gesture files, augment, pre-process, train models and evaluate dynamic gestures using an RGB camera.
 
 ```
+Version 1.1.1:
++Bug fixes
+--- 
 Version 1.1:
 With added Tensorboard support!
 Includes all features in Version 1.0
