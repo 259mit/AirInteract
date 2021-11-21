@@ -3,10 +3,10 @@
 A No-code one stop platform to record, annotate, visualize, merge gesture files, augment, pre-process, train models and evaluate dynamic gestures using an RGB camera.
 
 ```
-Version 1.0:
-Supports Dense neural Network, 
-Recording 3 gesture categories with custom annotations.
-PCA + In built pre-processing pipeline!
+Version 1.1:
+With added Tensorboard support!
+Includes all features in Version 1.0
+Check the bottom of this file for features included in previous versions.
 ```
 
 
@@ -134,3 +134,16 @@ License
 ---
 
 MIT License, 2021
+
+___________________
+
+Version History
+---
+
+```
+Version 1.0:
+Supports Dense neural Network, 
+Recording 3 gesture categories with custom annotations.
+PCA + In built pre-processing pipeline!
+```
+
