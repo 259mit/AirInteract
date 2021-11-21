@@ -82,6 +82,13 @@ The Model Training tab
 
 https://user-images.githubusercontent.com/64850155/142181711-60986399-7635-4358-8bd3-de324fdc4f67.mov
 
+### What's new?
+
+
+```
+Added Tensorboard support!
+```
+![tensorboard](https://user-images.githubusercontent.com/64850155/142769027-66a6d898-8e27-43a7-8d94-8a818792a0b0.jpg)
 
 ```
 The model building and training screen of Airinteract, 
