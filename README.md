@@ -145,7 +145,7 @@ python3 -m streamlit run main.py
 For Tensorboard:
 
 ```
-open http://localhost:6006 in a new tab
+http://localhost:6006
 ```
 
 ___________________
