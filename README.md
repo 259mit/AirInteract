@@ -17,9 +17,21 @@ Check the bottom of this file for features included in previous versions.
 
 ### By Mithesh Ramachandran
 
-## Contents
+## What's in here:
+  - [About](#about)
   - [App in action](#the-app-in-action)
+  - [The home tab](#the-home-tab)
+  - [The Recording tab](#the-recording-tab)
+  - [The Data Processing and Visualization tab](#the-data-processing-and-visualization-tab)
+  - [The Model Training tab](#the-model-training-tab)
+  - [How to Install AirInteract](#installation)
+  - [Dependencies](#dependencies)
+  - [License](#license)
+  - [Version History](#version-history)
 
+_____
+
+## About 
 
 To record, pre-process, train and test the dynamic gestures, introducing a no-code platform: AirInteract. AirInteract is based on Streamlit, a python-based web application deployment service. AirInteract is written completely in python. It has 3 main sections: Data Recording, Processing and Model Building.
 
