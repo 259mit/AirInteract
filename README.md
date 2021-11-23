@@ -4,6 +4,7 @@ A No-code one stop platform to record, annotate, visualize, merge gesture files,
 
 ```
 Version 1.1.1:
+
 +Bug fixes
 --- 
 Version 1.1:
