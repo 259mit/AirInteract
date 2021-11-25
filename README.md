@@ -58,7 +58,6 @@ ___________________
 
 The Recording tab
 ---
-<img width="1400" alt="Screenshot 2021-10-13 at 3 55 24 PM" src="https://user-images.githubusercontent.com/64850155/141966266-77dddd59-85ba-4a5e-82fc-6c89e7959077.png">
 
 ```
 The Recording screen of Airinteract, 
