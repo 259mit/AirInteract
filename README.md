@@ -2,6 +2,8 @@
 
 A No-code one stop platform to record, annotate, visualize, merge gesture files, augment, pre-process, train models and evaluate dynamic gestures using an RGB camera.
 
+### By Mithesh Ramachandran
+
 ```
 Version 1.1.1:
 
@@ -15,8 +17,6 @@ Check the bottom of this file for features included in previous versions.
 
 
 ![AirInteract logo copy](https://user-images.githubusercontent.com/64850155/141953087-30a1905b-4bb1-4039-990c-f24422d0703f.jpeg)
-
-### By Mithesh Ramachandran
 
 ## What's in here:
   - [About](#about)
