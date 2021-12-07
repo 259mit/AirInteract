@@ -4,6 +4,8 @@ A No-code one stop platform to record, annotate, visualize, merge gesture files,
 
 ### By Mithesh Ramachandran
 
+![AirInteract logo copy](https://user-images.githubusercontent.com/64850155/141953087-30a1905b-4bb1-4039-990c-f24422d0703f.jpeg)
+
 ```
 Version 1.1.1:
 
@@ -14,9 +16,6 @@ With added Tensorboard support!
 Includes all features in Version 1.0
 Check the bottom of this file for features included in previous versions.
 ```
-
-
-![AirInteract logo copy](https://user-images.githubusercontent.com/64850155/141953087-30a1905b-4bb1-4039-990c-f24422d0703f.jpeg)
 
 ## What's in here:
   - [About](#about)
