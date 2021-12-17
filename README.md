@@ -9,7 +9,7 @@ A No-code, one stop platform, to record, annotate, visualize, merge gesture file
 ```
 Version 1.1.1:
 
-* UPDATED: *
+* UPDATED: 18 Dec 21*
 
 +Bug fixes
 --- 
