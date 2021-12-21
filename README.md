@@ -31,7 +31,7 @@ Check the bottom of this file for features included in previous versions.
 
 _____
 
-## About 
+## About  
 
 To record, pre-process, train and test the dynamic gestures, introducing a no-code platform: AirInteract. AirInteract is based on Streamlit, a python-based web application deployment service. AirInteract is written completely in python. It has 3 main sections: Data Recording, Processing and Model Building.
 
