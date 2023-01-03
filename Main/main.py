@@ -1,5 +1,4 @@
 # Libraries
-
 from datetime import datetime
 import numpy as np
 import matplotlib.pyplot as plt
@@ -28,7 +27,9 @@ from threading import current_thread
 import streamlit as st
 import sys
 
+# Initialize variables for capturing gestures through video camera feed.
 cap = cv2.VideoCapture(0)
+# Set variable to display recorded feed on the streamlit app 
 FRAME_WINDOW = st.image([])
 mp_drawing = mp.solutions.drawing_utils
 mp_drawing_styles = mp.solutions.drawing_styles
@@ -40,8 +41,8 @@ mmy = []
 mmz = []
 pin = 0
 
+# Streamlit app UI
 st.set_option('deprecation.showPyplotGlobalUse', False)
-
 def main():
     st.sidebar.image(Image.open('AirInteract logo.png'), width=300)
     st.sidebar.title('AirInteract')
@@ -64,7 +65,7 @@ def main():
     if selected_box == 'Documentation':
         documentation()
     
-
+# Creating a function to process the pandas dataframe of the collected data into an XLSX data file
 def to_excel(df):
     output = BytesIO()
     writer = pd.ExcelWriter(output, engine='xlsxwriter')
@@ -73,6 +74,7 @@ def to_excel(df):
     processed_data = output.getvalue()
     return processed_data
 
+# Downloading the excel file via the streamlit app
 def get_table_download_link(df):
     """Generates a link allowing the data in a given panda dataframe to be downloaded
     in:  dataframe
@@ -87,6 +89,7 @@ def get_table_download_link(df):
 def get_data():
     return []
 
+# Record the getsures via Google's Mediapipe engine (Pretrained model)
 def record(pinsize, pin = 0):
   with mp_hands.Hands(
         min_detection_confidence=0.5,
@@ -126,6 +129,7 @@ def record(pinsize, pin = 0):
   #df = pd.DataFrame({'col':maxland, 'label':label})
   return maxland
 
+# Merge multiple recorded data frames and clean them
 def prepdata(a):
     print('Merging data...')
     df = pd.concat(a)
@@ -139,6 +143,7 @@ def prepdata(a):
     print('Total Null values = ', df.isnull().sum().sum())
     return df
 
+# Data processing to plot the data
 def preplot(liter, df):
     x = []
     y = []
@@ -147,32 +152,31 @@ def preplot(liter, df):
     k = [num for num in np.arange(0,21)]
     for i in k:
         x.append(df.loc[liter][i])
-        y.append(df.loc[liter][str(i)+'.1'])
-        z.append(df.loc[liter][str(i)+'.2'])
+        y.append(df.loc[liter][str(i)+'.1']) #Appending with .1 to indicate Y axis locations
+        z.append(df.loc[liter][str(i)+'.2']) #Appending with .2 to indicate Z axis locations
     labela = df.loc[liter]['label']
     return x, y, z, labela
 
+# Plotting the getsures via plotly.
 def plotges(ik, df):    
     x0, y0,z0, l0 = preplot(ik, df)
     fig = px.scatter_3d(x=x0, y=y0, z=z0)
     #fig.show()
     return fig
 
+# Set streamlit to enable refresh/ continous data collection
 @contextmanager
 def st_redirect(src, dst):
     placeholder = st.empty()
     output_func = getattr(placeholder, dst)
-
     with StringIO() as buffer:
         old_write = src.write
-
         def new_write(b):
             if getattr(current_thread(), REPORT_CONTEXT_ATTR_NAME, None):
                 buffer.write(b)
                 output_func(buffer.getvalue())
             else:
                 old_write(b)
-
         try:
             src.write = new_write
             yield
@@ -189,11 +193,12 @@ def st_stderr(dst):
     with st_redirect(sys.stderr, dst):
         yield
 
-
+# Model Training function
 def trainmodel():
-  st.title('AirInteract - Model Training Tool')
-  st.header('Hand Tracking Data Collection and Annotation Toolkit')
+  st.title('AirInteract - Model Training Tool') # App UI
+  st.header('Hand Tracking Data Collection and Annotation Toolkit') # App UI
   try:
+    # Data pre-processing
     df = pd.read_excel(st.file_uploader("Upload processed Dataframe", type="xlsx"))
     x = df.drop('label', axis = 1)
     x = x.drop('Unnamed: 0', axis = 1)
@@ -205,14 +210,15 @@ def trainmodel():
     st.dataframe(x)
     st.markdown('Principal Component Analysis')
     usepca = st.checkbox('Use PCA ?')
+    # Using principal component analysis to reduce data dimensions
     if usepca:
       try:
-        n_components = st.slider('Select number of components',2, 63)
+        n_components = st.slider('Select number of components',2, 63) # Select N components
         X = preprocessing.normalize(x)
         pca = PCA(n_components=n_components, whiten=True).fit(X)
         projected = pca.fit_transform(X)
         x = pd.DataFrame(projected)
-        st.text('Scree plot')
+        st.text('Scree plot') # Show scree plot
         PC_values = np.arange(pca.n_components_) + 1
         try:
           plt.figure(figsize=(6,4))
@@ -226,6 +232,7 @@ def trainmodel():
       except:
         pass
     st.write('Starting to process the data')
+    # Train test split
     X_train, X_test, y_train, y_test = train_test_split(x, y, test_size=per/100, random_state=42)
     label_encoder = preprocessing.LabelEncoder()
     y_train = label_encoder.fit_transform(y_train)
@@ -234,9 +241,10 @@ def trainmodel():
     y_test = keras.utils.to_categorical(y_test, len(y.unique()))
     st.success('Preprocessing Done!')
     st.markdown('Building the model')
+    # Add Neural Network layers
     try:
-      layer1 = st.number_input('Enter number of nodes in 1st layer',min_value=16, max_value=1024, key=None)
-      ka = st.number_input('Enter number of layers',min_value=1, max_value=10, key=None)
+      layer1 = st.number_input('Enter number of nodes in 1st layer',min_value=16, max_value=1024, key=None) # Input node
+      ka = st.number_input('Enter number of layers',min_value=1, max_value=10, key=None) 
       outl = len(y.unique())
       inact = 'relu'
       st.markdown('Choose the type of network you want to train')
